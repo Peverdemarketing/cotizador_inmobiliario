@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrador de citas inmobilarias</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2 class="text-center my-5 titulo" id="titulo_principal">Agendador tu cita</h2>
+    <div class="container mt-5 p-5">
+        <div id="caja" class="row">
+            <div class="col-md-6 agregar-cita">
+                <form id="agendar">
+                    <legend class="mb-4">Indique sus datos</legend>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Nombre y apellido</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre y apellido">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Lugar de interés o proyecto</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <select class="seleccionador_web" multiple name="proyecto" id="proyecto">
+                                <option>Santiago - Golf Plaza</option>
+                                <option>Viña del Mar - Aires de Viña</option>
+                                <option>Vitacura - Metropoli Costanera</option>
+                                <option>Providencia - Residencias Leon</option>
+                              </select>
+                            <!-- <input type="text" id="proyecto" name="proyecto" class="form-control"  placeholder="Coloca el nombre del proyecto o ubicación que deseas."> -->
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Teléfono:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="tel" id="telefono" name="telefono" class="form-control"  placeholder="Número de Teléfono">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Fecha en la que desea visitar el proyecto:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="date" id="fecha" name="fecha" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Hora:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="time" id="hora" name="hora" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">¿Cuales caracteristicas busca en un inmueble?:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <textarea id="caracteristicas" name="caracteristicas" class="form-control" placeholder="Ejemplo: 2 dormitorios, y 2 baños, o con vista al mar"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <button type="submit" class="btn btn-success w-100 d-block" id="boton-formulario">Crear Cita</button>
+                    </div>
+                </form>
+            </div>
+
+            <section class="brown_section">
+                <div class="col-md-1"> 
+                    <div class="row">
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="administrador_de_citas_seccion">
+                <div class="col-md-5" id="administrador-de-citas">
+                    <h2 id="administra" class="mb-4">Administra tus Citas</h2>
+                    <ul id="citas" class="list-group lista-citas"></ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
