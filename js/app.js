@@ -23,6 +23,10 @@ class Citas {
         console.log(this.citas);
     }
 
+    eliminarCita(id) {
+        this.citas = this.citas.filter( cita => cita.id !== id);
+    }
+
 }
 
 
@@ -90,6 +94,15 @@ class UI {
  
 
 
+
+            // boton eliminar
+
+            const botonEliminar = document.createElement('button');
+            botonEliminar.onclick = () => eliminarCita(id); // añade la opción de eliminar
+            botonEliminar.classList.add('btn', 'btn-danger', 'mr-2', 'pd-3');
+            botonEliminar.innerHTML = 'Eliminar Cita <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+
+
             // Parrafor div cita
 
             divCita.appendChild(nombreParrafo);
@@ -98,6 +111,7 @@ class UI {
             divCita.appendChild(fechaParrafo);
             divCita.appendChild(horaParrafo);
             divCita.appendChild(caracteristicasParrafo);
+            divCita.appendChild(botonEliminar);
 
             // Agregar cita a html
 
@@ -183,6 +197,13 @@ function agendarCita(e) {
 
 
 
+}
+
+
+function eliminarCita(id) {
+    administrarCitas.eliminarCita(id);
+
+    ui.imprimirCitas(administrarCitas)
 }
 
 
