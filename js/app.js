@@ -23,6 +23,10 @@ class Citas {
         console.log(this.citas);
     }
 
+    editarCita(citaActualizada) {
+        this.citas = this.citas.map( cita => cita.id === citaActualizada.id ? citaActualizada : cita)
+    }
+
     eliminarCita(id) {
         this.citas = this.citas.filter( cita => cita.id !== id);
     }
@@ -103,6 +107,12 @@ class UI {
             botonEliminar.innerHTML = 'Eliminar Cita <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
 
 
+            // Añade un botón de editar...
+            const btnEditar = document.createElement('button');
+            btnEditar.onclick = () => cargarEdicion(cita);
+            btnEditar.classList.add('btn', 'btn-info');
+            btnEditar.innerHTML = 'Editar <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>'
+            
             // Parrafor div cita
 
             divCita.appendChild(nombreParrafo);
@@ -167,6 +177,12 @@ function datosCita(e) {
 }
 
 
+
+
+// Variable inicializada en falso de editar
+let editando = false;
+
+
 // Agregar una nueva cita luego de validarla
 
 function agendarCita(e) {
@@ -180,6 +196,10 @@ function agendarCita(e) {
         // Return para evitar que avance a la siguiente linea
         return;
     }
+
+
+   
+
     // Agendando una nueva cita
 
     citaObj.id =  Date.now();
@@ -216,3 +236,4 @@ function reiniciarObjeto() {
     citaObj.hora = '';
     citaObj.caracteristicas = '';
 }
+
