@@ -123,6 +123,8 @@ class UI {
             divCita.appendChild(caracteristicasParrafo);
             divCita.appendChild(botonEliminar);
 
+
+
             // Agregar cita a html
 
             contenedorCitas.appendChild(divCita);
@@ -164,8 +166,9 @@ const citaObj = {
     fecha: '',
     hora: '',
     caracteristicas: '',
-}
 
+    
+}
 
 // Se va llamando por cada dato agregado al input, la "e" es por evento
 
@@ -209,14 +212,20 @@ function agendarCita(e) {
  
     // Mostrar HTML de las citas
     ui.imprimirCitas(administrarCitas);
-    
+
     // Reiniciar objeto
     reiniciarObjeto();
     // Resetear
     formulario.reset();
 
+    // local storage funcion
+    localStorageGuardado()
+}
 
 
+// LOCAL STORAGE
+function localStorageGuardado() {
+    localStorage.setItem('Cita', JSON.stringify(administrarCitas));
 }
 
 
