@@ -225,14 +225,23 @@ function agendarCita(e) {
 
 // LOCAL STORAGE
 function localStorageGuardado() {
-    localStorage.setItem('Cita', JSON.stringify(administrarCitas));
+        localStorage.setItem('Cita', JSON.stringify(administrarCitas));
+}
+
+
+//Ubicar posición del arreglo en local storage
+
+
+// LOCAL STORAGE ELIMINAR
+function localStorageEliminar(id){
+    localStorage.clear('data-id', JSON.stringify(administrarCitas));
 }
 
 
 function eliminarCita(id) {
     administrarCitas.eliminarCita(id);
-
-    ui.imprimirCitas(administrarCitas)
+    localStorageEliminar(id);
+    ui.imprimirCitas(administrarCitas);
 }
 
 
