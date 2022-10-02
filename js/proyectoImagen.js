@@ -6,8 +6,8 @@ function seleccionarProyecto() {
     
     if (nombre_proyecto == 'golf') {
         const img = document.createElement('img');
-        img.src = '../assets/golf.png';
-        img.src = '../assets/golf1.png';
+        img.src = '/assets/golf.png';
+        img.src = '/assets/golf1.png';
         document.querySelector('#imagenProyectoDom').appendChild(img);
         document.getElementById('textoProyecto').innerHTML = `Seleccionaste el proyecto ${nombre_proyecto}. Tiene 3 Dormitorios y 2 baños, a 5 minutos del Club de Golf los Alcones`;
     } else if(nombre_proyecto === 'mar') {
@@ -19,14 +19,14 @@ function seleccionarProyecto() {
         document.getElementById('textoProyecto').innerHTML = `Seleccionaste el proyecto ${nombre_proyecto}. Tiene 4 Dormitorios y 2 baños, con preciosa vista al mar.`;
     } else if(nombre_proyecto === 'providencia') {
         const img = document.createElement('img');
-        img.src = '../assets/providencia.png';
-        img.src = '../assets/providencia1.png';
+        img.src = '/assets/providencia.png';
+        img.src = '/assets/providencia1.png';
         document.querySelector('#imagenProyectoDom').appendChild(img); 
         document.getElementById('textoProyecto').innerHTML = `Seleccionaste el proyecto ${nombre_proyecto}. Tiene 2 Dormitorios y 2 baños, con acceso a un jardín para la familia.`;
     } else if(nombre_proyecto === 'vitacura') {
         const img = document.createElement('img');
-        img.src = '../assets/vitacura.png';
-        img.src = '../assets/vitacura1.png';
+        img.src = '/assets/vitacura.png';
+        img.src = '/assets/vitacura1.png';
         document.querySelector('#imagenProyectoDom').appendChild(img);
         document.getElementById('textoProyecto').innerHTML = `Seleccionaste el proyecto ${nombre_proyecto}. Tiene 3 Dormitorios y 2 baños, cerca de centros comerciales y restaurantes de primer nivel.`;
     } else {
