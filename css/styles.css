@@ -115,6 +115,19 @@ textarea {
     background-color: orange;
 }
 
+#promocion h5{
+  color: brown;
+
+}
 
 
+.h5 {
+  color: brown;
+}
 
+.indicadores {
+  padding-top: 10px ;
+  background-color: white;
+  font-size:xx-small;
+
+}

@@ -20,7 +20,7 @@ class Citas {
     agendarCita(cita) {
         this.citas = [...this.citas, cita];
         // Esto sirve para ver como se van añadiendo las citas
-        console.log(this.citas);
+        console.table(this.citas);
     }
 
     editarCita(citaActualizada) {
@@ -129,7 +129,7 @@ class UI {
 
             contenedorCitas.appendChild(divCita);
         })
-        console.log(citas);
+        console.table(citas);
     }
     vaciarHTML() {
         while(contenedorCitas.firstChild) {
@@ -254,4 +254,3 @@ function reiniciarObjeto() {
     citaObj.hora = '';
     citaObj.caracteristicas = '';
 }
-
