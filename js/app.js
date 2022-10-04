@@ -200,9 +200,6 @@ function agendarCita(e) {
         return;
     }
 
-
-   
-
     // Agendando una nueva cita
 
     citaObj.id =  Date.now();

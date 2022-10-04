@@ -1,4 +1,6 @@
-fetch('https://mindicador.cl/api').then(function(response) {
+try {
+
+    fetch('https://mindicador.cl/api').then(function(response) {
     return response.json();
 }).then(function(dailyIndicators) {
     document.getElementById("UF").innerHTML = 'El valor actual de la UF es $' + dailyIndicators.uf.valor;
@@ -12,3 +14,13 @@ fetch('https://mindicador.cl/api').then(function(response) {
 }).catch(function(error) {
     console.log('Requestfailed', error);
 });
+    
+} catch (error) {
+   console.log("No se pudieron cargar datos de api del Banco central de Chile.") 
+   document.getElementsByClassName("indicadores").removeChild; 
+   document.getElementById("UF").removeChild; 
+   document.getElementById(".indicadores").removeChild; 
+}
+
+
+

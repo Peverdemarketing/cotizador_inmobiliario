@@ -1,6 +1,8 @@
 const promocion = document.querySelector("#promocion")
 
-fetch("js/promociones.json")
+try {
+
+    fetch("js/promociones.json")
 .then((res)=>res.json())
 .then((promociones)=>{
     promociones.forEach((inmueble)=>{
@@ -13,4 +15,10 @@ fetch("js/promociones.json")
     })
 
 })
+    
+} catch (error) {
+    console.log("Ha ocurrido un error")   
+}
+
+
 
