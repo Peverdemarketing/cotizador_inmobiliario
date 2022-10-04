@@ -16,7 +16,7 @@ function seleccionarProyecto() {
         document.getElementById('textoProyecto').innerHTML = `Seleccionaste el proyecto ${nombre_proyecto}. Tiene 4 Dormitorios y 2 baños, con preciosa vista al mar.`;
     } else if(nombre_proyecto === 'providencia') {
         const img = document.createElement('img');
-        img.src = 'https://peverdemarketing.com/wp-content/uploads/2022/10/Providencia1.png.png';
+        img.src = 'https://peverdemarketing.com/wp-content/uploads/2022/10/Providencia1.png';
         document.querySelector('#imagenProyectoDom').appendChild(img); 
         document.getElementById('textoProyecto').innerHTML = `Seleccionaste el proyecto ${nombre_proyecto}. Tiene 2 Dormitorios y 2 baños, con acceso a un jardín para la familia.`;
     } else if(nombre_proyecto === 'vitacura') {
