@@ -17,7 +17,7 @@ try {
     
 } catch (error) {
    console.log("No se pudieron cargar datos de api del Banco central de Chile.") 
-   document.getElementsByClassName("indicadores").removeChild; 
+   document.getElementById("indicadores-p").removeChild; 
    document.getElementById("UF").removeChild; 
    document.getElementById(".indicadores").removeChild; 
 }
