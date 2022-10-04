@@ -1,0 +1,18 @@
+Muchas gracias por visitar esta app. 
+
+Objetivo de la App:
+
+Tiene el objetivos de ofrecer la oportunidad de almacenar datos de una eventual cotización o agendamiento para visitar un proyecto inmobiliario. 
+
+Git Hub Pages:
+https://peverdemarketing.github.io/cotizador_inmobiliario/
+Git Hub Repositorio:
+https://github.com/Peverdemarketing/cotizador_inmobiliario
+
+Tecnologías implementadas:
+HTML, CSS, y Javascript.
+
+Fecha de última actualización:
+4/10/2022
+
+Autor: Pedro Verde
